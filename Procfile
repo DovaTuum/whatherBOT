@@ -1,1 +1,1 @@
-worker: sh target/classes/startcoder/Run
+worker: sh src/main/java/startcoder/Run
