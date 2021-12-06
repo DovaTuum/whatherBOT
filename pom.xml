@@ -42,7 +42,7 @@
                 <appName>yourAppName_on_Heroku</appName>
                 <processTypes>
                     <worker>
-                        java $JAVA_OPTS -cp target/classes:target/dependency/* target.classes.startcode.Run-class
+                        java $JAVA_OPTS -cp target/classes:target/dependency/* src.main.java.startcoder.Run-class
                     </worker>
                 </processTypes>
             </configuration>
