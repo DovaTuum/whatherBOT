@@ -1,1 +1,2 @@
-
+main-class: Run
+class-path:/src/main/java/startcoder/Run
