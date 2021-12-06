@@ -1,1 +1,1 @@
-web: java -jar target/TeleBot-1.0.jar
+web: java -m manifest -jar target/TeleBot-1.0.jar
