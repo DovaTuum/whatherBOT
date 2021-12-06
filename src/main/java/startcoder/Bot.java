@@ -65,7 +65,7 @@ public class Bot {
         else if(msg.entities() != null)
             handleMessage(msg);
         else if(msg.sticker() != null)
-            bot.execute(new SendSticker(msg.chat().id(), stikers[random.nextInt(0, 11)]));
+            bot.execute(new SendSticker(msg.chat().id(), stikers[random.nextInt(11)]));
         else
             bot.execute(new SendMessage(msg.chat().id(), "Очень смешно, но Андрюшка не научил меня распозновать это)"));
     }
@@ -112,14 +112,18 @@ public class Bot {
             }
             bot.execute(new SendMessage(chatId, response));
             bot.execute(new SendMessage(chatId, "Желаю успехов! ^ ^"));
-            bot.execute(new SendSticker(chatId, stikers[random.nextInt(0, 11)]));
+            bot.execute(new SendSticker(chatId, stikers[random.nextInt(11)]));
         }
     }
 
     private void handleMessage(Message msg) {
         switch (msg.text()) {
-            case "/wheather" -> wheather(msg);
-            case "/start" -> bot.execute(new SendMessage(msg.chat().id(), "Привет! Я сделан на Java! Могу рассказать прогноз погоды"));
+            case "/wheather":
+                wheather(msg);
+                break;
+            case "/start":
+                bot.execute(new SendMessage(msg.chat().id(), "Привет! Я сделан на Java! Могу рассказать прогноз погоды"));
+                break;
         }
     }
 }
