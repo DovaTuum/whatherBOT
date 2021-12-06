@@ -1,1 +1,1 @@
-web: java -jar target/TeleBot.jar
+web: java -jar target/TeleBot.jar/Run.class
