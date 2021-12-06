@@ -1,1 +1,1 @@
-worker: sh target/classes/startcoder/Run
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* startcoder.Run
