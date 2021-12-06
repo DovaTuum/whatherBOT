@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/TeleBot.jar
+web: java -jar target/TeleBot.jar
