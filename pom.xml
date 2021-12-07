@@ -42,23 +42,6 @@
     <build>
     <plugins>
         <plugin>
-            <artifactId>maven-clean-plugin</artifactId>
-            <version>2.6.1</version>
-            <configuration>
-                <failOnError>false</failOnError>
-                <retryOnError>true</retryOnError>
-            </configuration>
-            <executions>
-                <execution>
-                    <id>auto-clean</id>
-                    <phase>initialize</phase>
-                    <goals>
-                        <goal>clean</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-        <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
             <version>3.1.1</version>
@@ -91,6 +74,24 @@
                 <source>8</source>
                 <target>8</target>
             </configuration>
+        </plugin>
+        <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>3.1.0</version>
+            <configuration>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>make-assembly</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>single</goal>
+                    </goals>
+                </execution>
+            </executions>
         </plugin>
     </plugins>
     </build>
