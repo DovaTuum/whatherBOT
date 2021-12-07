@@ -65,7 +65,7 @@
             <configuration>
                 <archive>
                     <manifest>
-                        <mainClass>Run</mainClass>
+                        <mainClass>startcoder.Run</mainClass>
                     </manifest>
                 </archive>
             </configuration>
